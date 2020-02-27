@@ -1,37 +1,30 @@
 [
-  {
-    "model": "categories.category",
-    "pk": 1,
-    "fields": {
-      "name": "Technology"
-    }
-  },
-  {
-      "model": "categories.category",
-      "pk": 2,
-      "fields": {
-        "name": "Software Development"
-      }
-  },
-  {
-      "model": "categories.category",
-      "pk": 3,
-      "fields": {
-        "name": "Careers"
-      }
-  },
-  {
-      "model": "categories.category",
-      "pk": 4,
-      "fields": {
-        "name": "Culture"
-      }
-  },
-  {
-      "model": "categories.category",
-      "pk": 5,
-      "fields": {
-        "name": "Frameworks"
-      }
+{
+  "model": "categories.category",
+  "pk": 1,
+  "fields": {
+    "category_name": "jobs"
   }
+},
+{
+  "model": "categories.category",
+  "pk": 2,
+  "fields": {
+    "category_name": "tech"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 3,
+  "fields": {
+    "category_name": "programming"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "category_name": "progression"
+  }
+}
 ]

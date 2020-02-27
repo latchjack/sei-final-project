@@ -1,62 +1,84 @@
 [
-  {
-    "model": "articles.article",
-    "pk": 1,
-    "fields": {
-      "title": "1 ESSENTIAL JS INTERVIEW QUESTION",
-      "date": "",
-      "text": "Linter Linter Linter",
-      "categories": ""
-    }
-  },
-  {
-    "model": "articles.article",
-    "pk": 2,
-    "fields": {
-      "name": "Fighting the Fear of Code Challenges",
-      "date": "",
-      "text": "Text goes here",
-      "categories": ""
-    }
-  },
-  {
-    "model": "articles.article",
-    "pk": 3,
-    "fields": {
-      "title": "Tabs vs Spaces",
-      "date": "",
-      "text": "What're the real technical key aspects that need to be considered before deciding or coming to a conclusion of battle of Tabs vs Spaces?",
-      "categories": ""
-    }
-  },
-  {
-    "model": "articles.article",
-    "pk": 4,
-    "fields": {
-      "name": "Are You interested in a series implementing the same application in Vue, React, Angular, Svelte",
-      "date": "",
-      "text": "Last months learning React after Angular and Vue, I've come to the conclusion that frontend frameworks are very similar. I've started implementing the same application with nearly identical files, components and store structures.",
-      "categories": ""
-    }
-  },
-  {
-    "model": "articles.article",
-    "pk": 5,
-    "fields": {
-      "title": "You Think You Know CSS",
-      "date": "",
-      "text": "CSS codes are extremely opinionated across teams and individuals. There isn't much we can do to change how CSS works, but we can make changes to the way we author and structure it. The problem with CSS conventions is that they rely on developers to manually maintain them with a high degree of accuracy to be effective.",
-      "categories": ""
-    }
-  },
-  {
-    "model": "articles.article",
-    "pk": 6,
-    "fields": {
-      "name": "Hoisting",
-      "date": "",
-      "text": "In the example above, the declaration and assignment of value happen inline for variable x. In JavaScript, every variable or function declaration you bring to the top of its current scope is called hoisting.",
-      "categories": ""
-    }
+{
+  "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "title": "How to get hired as a dev",
+    "date": "2020-02-27T17:41:10Z",
+    "text": "Email everyone, tweet everyone. pester pester pester",
+    "categories": [
+      1,
+      2
+    ]
   }
+},
+{
+  "model": "articles.article",
+  "pk": 2,
+  "fields": {
+    "title": "How many programming languages do you know?",
+    "date": "2020-02-27T17:41:52Z",
+    "text": "I know 18. let me rub it in...",
+    "categories": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 3,
+  "fields": {
+    "title": "A day in the life of a frontend dev",
+    "date": "2020-02-27T17:42:34Z",
+    "text": "Code Code Code Code Code Code Code Code Code Code Code Code Code Code Code Code Code",
+    "categories": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 4,
+  "fields": {
+    "title": "How to reach your audience",
+    "date": "2020-02-27T17:43:14Z",
+    "text": "tweet, email, spam, the works...",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 5,
+  "fields": {
+    "title": "Whats your goals this year?",
+    "date": "2020-02-27T17:43:40Z",
+    "text": "1. 2. 3. 4.Goal",
+    "categories": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "articles.like",
+  "pk": 1,
+  "fields": {
+    "like": 1,
+    "owner": 1,
+    "article": 1
+  }
+},
+{
+  "model": "articles.like",
+  "pk": 2,
+  "fields": {
+    "like": 1,
+    "owner": 1,
+    "article": 4
+  }
+}
 ]
