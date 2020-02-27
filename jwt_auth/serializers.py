@@ -21,5 +21,5 @@ class UserSerializer(serializers.ModelSerializer):
     return data
     
   class Meta:
-    mode = User
+    model = User
     fields = '__all__'
