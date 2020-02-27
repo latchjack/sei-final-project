@@ -7,8 +7,8 @@ from rest_framework.status import HTTP_422_UNPROCESSABLE_ENTITY
 from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.status import HTTP_202_ACCEPTED, HTTP_401_UNAUTHORIZED
 
-from .models import Article, Comment
-from .serializers import ArticleSerializer, PopulatedArticleSerializer, CommentSerializer
+from .models import Article, Comment, Like
+from .serializers import ArticleSerializer, PopulatedArticleSerializer, CommentSerializer , LikeSerializer
 
 class ArticleListView(APIView):
 
@@ -85,6 +85,36 @@ class CommentDetailView(APIView):
       if comment.owner.id != request.user.id:
         return Response(status=HTTP_401_UNAUTHORIZED)
       comment.delete()
+      return Response(status=HTTP_204_NO_CONTENT)
+    except Article.DoesNotExist:
+      return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
+
+class LikeListView(APIView):
+
+  def post(self, request, pk):
+    request.data['article'] = pk
+    request.data['owner'] = request.user.id
+
+    like = LikeSerializer(data=request.data)
+
+    if like.is_valid():
+      like.save()
+      article = Article.objects.get(pk=pk)
+      serialized_article = PopulatedArticleSerializer(article)
+
+      return Response(serialized_article.data, status=HTTP_201_CREATED)
+
+    return Response(like.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+
+class LikeDetailView(APIView):
+
+  def delete(self, request, pk, like_pk):
+    
+    try:
+      like = Like.objects.get(pk=like_pk)
+      if like.owner.id != request.user.id:
+        return Response(status=HTTP_401_UNAUTHORIZED)
+      like.delete()
       return Response(status=HTTP_204_NO_CONTENT)
     except Article.DoesNotExist:
       return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
