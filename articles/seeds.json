@@ -1,0 +1,50 @@
+[
+  {
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+      "title": "1 ESSENTIAL JS INTERVIEW QUESTION",
+      "text": "Linter Linter Linter"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+      "name": "Fighting the Fear of Code Challenges",
+      "text": "Text goes here"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 3,
+    "fields": {
+      "title": "Tabs vs Spaces",
+      "text": "What're the real technical key aspects that need to be considered before deciding or coming to a conclusion of battle of Tabs vs Spaces?"
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 4,
+    "fields": {
+      "name": "Are You interested in a series implementing the same application in Vue, React, Angular, Svelte",
+      "text": "Last months learning React after Angular and Vue, I've come to the conclusion that frontend frameworks are very similar. I've started implementing the same application with nearly identical files, components and store structures."
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 5,
+    "fields": {
+      "title": "You Think You Know CSS",
+      "text": "CSS codes are extremely opinionated across teams and individuals. There isn’t much we can do to change how CSS works, but we can make changes to the way we author and structure it. The problem with CSS conventions is that they rely on developers to manually maintain them with a high degree of accuracy to be effective."
+    }
+  },
+  {
+    "model": "articles.article",
+    "pk": 6,
+    "fields": {
+      "name": "Hoisting",
+      "text": "In the example above, the declaration and assignment of value happen inline for variable x. In JavaScript, every variable or function declaration you bring to the top of its current scope is called hoisting."
+    }
+  }
+]
