@@ -13,10 +13,18 @@ from .serializers import CategorySerializer
 class CategoryListView(APIView):
 
   def get(self, _request):
-    print('here')
     categories = Category.objects.all()
-    print('here')
     serialized_categories = CategorySerializer(categories, many=True)
-    print('here')
-
+    
     return Response(serialized_categories.data)
+
+class CategoryDetailView(APIView):
+
+  def get(self, _request, pk):
+
+    try:
+      article = Category.objects.get(pk=pk)
+      serialized_article = CategorySerializer(article)
+      return Response(serialized_article.data)
+    except Category.DoesNotExist:
+      return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
