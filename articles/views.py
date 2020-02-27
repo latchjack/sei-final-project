@@ -54,7 +54,7 @@ class ArticleDetailView(APIView):
 
     try:
       article = Article.objects.get(pk=pk)
-      article.date()
+      article.delete()
       return Response(status=HTTP_204_NO_CONTENT)
     except Article.DoesNotExist:
       return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
