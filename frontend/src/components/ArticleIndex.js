@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import ArticleCard from './ArticleCard'
+
 class ArticleIndex extends React.Component {
   state = {
     articles: []
@@ -22,14 +24,9 @@ class ArticleIndex extends React.Component {
       <>
 
         <div>
-          {this.state.articles.map(article => {
-            console.log(article)
-          return <div>
-            <h1 key={article.id}>{article.title}</h1>
-          <h3>{article.categories}</h3>
-          <h4>{article.date}</h4>
-            </div>
-          })}
+          {this.state.articles.map(article => (
+            <ArticleCard key={article.id} {...article} />
+          ))}
         </div>
 
       </>
