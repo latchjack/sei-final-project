@@ -9,7 +9,7 @@ User = get_user_model()
 
 class Article(models.Model):
   title = models.CharField(max_length=50)
-  # user = models.OneToOneRel()
+  owner = models.ForeignKey(User, related_name='articles', null=True, on_delete=models.CASCADE)
   date = models.DateTimeField(default=timezone.now)
   text = models.CharField(max_length=1000)
   categories = models.ManyToManyField('categories.Category', related_name='categories', blank=True)

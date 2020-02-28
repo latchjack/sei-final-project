@@ -24,7 +24,11 @@ class ArticleIndex extends React.Component {
         <div>
           {this.state.articles.map(article => {
             console.log(article)
-            return <h1 key={article.id}>{article.title}</h1>
+          return <div>
+            <h1 key={article.id}>{article.title}</h1>
+          <h3>{article.categories}</h3>
+          <h4>{article.date}</h4>
+            </div>
           })}
         </div>
 

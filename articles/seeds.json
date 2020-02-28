@@ -3,11 +3,12 @@
   "model": "articles.article",
   "pk": 1,
   "fields": {
-    "title": "How to get hired as a Dev",
-    "date": "2020-02-28T09:42:16Z",
-    "text": "Email everyone, tweet everyone. pester pester pester",
+    "title": "Article 1",
+    "owner": 1,
+    "date": "2020-02-28T16:28:42Z",
+    "text": "Article 1 text",
     "categories": [
-      3
+      1
     ]
   }
 },
@@ -15,11 +16,11 @@
   "model": "articles.article",
   "pk": 2,
   "fields": {
-    "title": "How many programming languages do you know?",
-    "date": "2020-02-28T09:42:35Z",
-    "text": "I know 18. Let me rub it in...",
+    "title": "Article 2",
+    "owner": 1,
+    "date": "2020-02-28T16:29:10Z",
+    "text": "Article 2 text",
     "categories": [
-      1,
       2
     ]
   }
@@ -28,7 +29,7 @@
   "model": "articles.comment",
   "pk": 1,
   "fields": {
-    "text": "Love Love Love",
+    "text": "First comment!",
     "owner": 1,
     "article": 1
   }
@@ -37,7 +38,7 @@
   "model": "articles.comment",
   "pk": 2,
   "fields": {
-    "text": "Wow I need to learn more!!!!",
+    "text": "Second!",
     "owner": 1,
     "article": 2
   }
@@ -55,7 +56,7 @@
   "model": "articles.like",
   "pk": 2,
   "fields": {
-    "like": 5,
+    "like": 1,
     "owner": 1,
     "article": 2
   }
