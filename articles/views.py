@@ -39,16 +39,15 @@ class ArticleDetailView(APIView):
     except Article.DoesNotExist:
       return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
 
-  def put(self, request, pk):
 
-    try:
+
+  def put(self, request, pk):
       article = Article.objects.get(pk=pk)
       updated_article = ArticleSerializer(article, data=request.data)
       if updated_article.is_valid():
-        updated_article.save()
-        return Response(updated_article.errors, status=HTTP_202_ACCEPTED)
-    except Article.DoesNotExist:
-        return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
+          updated_article.save()
+          return Response(updated_article.data)
+      return Response(updated_article.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
 
   def delete(self, _request, pk):
 

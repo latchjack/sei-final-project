@@ -1,14 +1,63 @@
 [
 {
   "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "title": "How to get hired as a Dev",
+    "date": "2020-02-28T09:42:16Z",
+    "text": "Email everyone, tweet everyone. pester pester pester",
+    "categories": [
+      3
+    ]
+  }
+},
+{
+  "model": "articles.article",
   "pk": 2,
   "fields": {
-    "title": "Article 1",
-    "date": "2020-02-27T18:52:36Z",
-    "text": "text",
+    "title": "How many programming languages do you know?",
+    "date": "2020-02-28T09:42:35Z",
+    "text": "I know 18. Let me rub it in...",
     "categories": [
-      1
+      1,
+      2
     ]
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 1,
+  "fields": {
+    "text": "Love Love Love",
+    "owner": 1,
+    "article": 1
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 2,
+  "fields": {
+    "text": "Wow I need to learn more!!!!",
+    "owner": 1,
+    "article": 2
+  }
+},
+{
+  "model": "articles.like",
+  "pk": 1,
+  "fields": {
+    "like": 1,
+    "owner": 1,
+    "article": 1
+  }
+},
+{
+  "model": "articles.like",
+  "pk": 2,
+  "fields": {
+    "like": 5,
+    "owner": 1,
+    "article": 2
   }
 }
 ]
