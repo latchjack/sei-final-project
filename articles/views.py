@@ -77,15 +77,23 @@ class CommentListView(APIView):
 
 class CommentDetailView(APIView):
 
-  def delete(self, request, pk, comment_pk):
-    
+  def get(self, _request, **kwargs):
+
     try:
-      comment = Comment.objects.get(pk=comment_pk)
-      if comment.owner.id != request.user.id:
-        return Response(status=HTTP_401_UNAUTHORIZED)
+      print(kwargs)
+      comment = Comment.objects.get(pk=kwargs['pk'])
+      serialized_comment = CommentSerializer(comment)
+      return Response(serialized_comment.data)
+    except Comment.DoesNotExist:
+      return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
+
+  def delete(self, _request, **kwargs):
+
+    try:
+      comment = Comment.objects.get(pk=kwargs['pk'])
       comment.delete()
       return Response(status=HTTP_204_NO_CONTENT)
-    except Article.DoesNotExist:
+    except Comment.DoesNotExist:
       return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
 
 class LikeListView(APIView):
