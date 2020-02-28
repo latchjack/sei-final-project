@@ -10,17 +10,22 @@ class ArticleIndex extends React.Component {
     try {
       const res = await axios.get('api/articles/')
       console.log(res.data)
+      this.setState({ articles: res.data })
     } catch(err) {
       console.log(err)
     }
   }
 
   render() {
+    if(!this.state.articles.length) return null
     return (
       <>
 
         <div>
-          hello
+          {this.state.articles.map(article => {
+            console.log(article)
+            return <h1 key={article.id}>{article.title}</h1>
+          })}
         </div>
 
       </>
