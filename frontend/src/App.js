@@ -9,6 +9,8 @@ import Home from './components/common/Home'
 import Login from'./components/auth/Login'
 import Register from './components/auth/Register'
 import ArticleShow from './components/ArticleShow'
+// import SecureRoute from './components/common/SecureRoute'
+
 
 class App extends React.Component {
   render() {
@@ -17,6 +19,7 @@ class App extends React.Component {
         <main>
           <Navbar/>
           <Switch>
+            {/* <SecureRoute path="/articles/new" component={ArticleForm}/> */}
             <Route exact path="/" component={Home}/>
             <Route path="/articles/:id" component={ArticleShow}/> 
             <Route path="/articles" component={ArticleIndex}/>

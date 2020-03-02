@@ -23,20 +23,23 @@ class Login extends React.Component {
     e.preventDefault()
     try {
       const res = await axios.post('/api/login/', this.state.data)
+      console.log('now')
       auth.setToken(res.data.token)
+      this.props.history.push('/articles')
       
     } catch (err) {
       this.setState({ error: 'Incorrect Credentials' })
     }
-    this.props.history.push('api/articles/')
+    
   }
 
   render() {
+    console.log(this.state.data)
     return (
       <section className="section">
         <div className="container">
           <div className="columns">
-          <form className="column is-half is-offset-one-quarter">
+          <form className="column is-half is-offset-one-quarter" onSubmit={this.handleSubmit}>
             <h2 className="title">Login</h2>
             <div className="field">
               <label className="label">Email</label>
