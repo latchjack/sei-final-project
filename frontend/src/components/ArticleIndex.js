@@ -11,7 +11,7 @@ class ArticleIndex extends React.Component {
   async componentDidMount() {
     try {
       const res = await axios.get('api/articles/')
-      console.log(res.data)
+      // console.log(res.data)
       this.setState({ articles: res.data })
     } catch(err) {
       console.log(err)

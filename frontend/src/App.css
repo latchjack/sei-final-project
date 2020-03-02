@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Rubik', ;
+}
 .hero-body {
   background-image: url('https://www.keendevelopers.com/wp-content/uploads/2019/04/website-design-background.png');
   background-repeat: no-repeat;

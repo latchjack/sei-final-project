@@ -8,6 +8,7 @@ import Navbar from './components/common/Navbar'
 import Home from './components/common/Home'
 import Login from'./components/auth/Login'
 import Register from './components/auth/Register'
+import ArticleShow from './components/ArticleShow'
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Navbar/>
           <Switch>
             <Route exact path="/" component={Home}/>
+            <Route path="/articles/:id" component={ArticleShow}/> 
             <Route path="/articles" component={ArticleIndex}/>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register}/>
