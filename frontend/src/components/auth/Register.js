@@ -42,6 +42,7 @@ class Register extends React.Component {
               <label className="label">Username</label>
               <div className="control has-icons-left">
               <input 
+                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Username"
                       required
                       name="username"
@@ -56,6 +57,7 @@ class Register extends React.Component {
               <label className="label">Email</label>
               <div className="control has-icons-left">
               <input 
+                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Email"
                       required
                       name="email"
@@ -70,6 +72,7 @@ class Register extends React.Component {
               <label className="label">Password</label>
               <div className="control has-icons-left">
               <input 
+                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Password"
                       required
                       name="password"
@@ -85,6 +88,7 @@ class Register extends React.Component {
               <label className="label">Password Confirmation</label>
               <div className="control has-icons-left">
               <input 
+                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Password Confirmation"
                       required
                       type="password"
