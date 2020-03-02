@@ -20,7 +20,7 @@ class ArticleListView(APIView):
     return Response(serialized_articles.data)
 
   def post(self, request):
-
+    request.data['owner'] = request.user.id
     article = ArticleSerializer(data=request.data)
 
     if article.is_valid():
