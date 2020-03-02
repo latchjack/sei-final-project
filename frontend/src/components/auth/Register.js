@@ -99,8 +99,8 @@ class Register extends React.Component {
                       <i className="fas fa-lock-open"></i>
                     </span>
               </div>
+              {this.state.errors.passwordConfirmation && <small className="help is-danger">{this.state.errors.passwordConfirmation}</small>}
             </div>
-
             <div className="field">
               <button type="submit" className="button is-fullwidth has-background-dark has-text-white">Register Me</button>
             </div>

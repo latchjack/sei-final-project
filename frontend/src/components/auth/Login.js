@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import auth from '../../lib/auth'
+import { headers } from '../../lib/headers'
 
 class Login extends React.Component {
 
@@ -14,29 +15,33 @@ class Login extends React.Component {
     
   }
 
-  handleChange = ({ target: { username, value } } ) => {
-    const data = ({ ...this.state.data, [username]: value })
+  handleChange = ({ target: { name, value } } ) => {
+    const data = ({ ...this.state.data, [name]: value })
     this.setState({ data, error: '' })
   }
 
   handleSubmit = async e => {
     e.preventDefault()
     try {
-      const res = await axios.post('/api/login/', this.state.data)
+      console.log(this.state.data)
+      const res = await axios.post('/api/login/', this.state.data, headers)
+      
       auth.setToken(res.data.token)
+      this.props.history.push('/articles')
       
     } catch (err) {
       this.setState({ error: 'Incorrect Credentials' })
     }
-    this.props.history.push('api/articles/')
+    
   }
 
   render() {
+    console.log(this.state.data)
     return (
       <section className="section">
         <div className="container">
           <div className="columns">
-          <form className="column is-half is-offset-one-quarter">
+          <form className="column is-half is-offset-one-quarter" onSubmit={this.handleSubmit}>
             <h2 className="title">Login</h2>
             <div className="field">
               <label className="label">Email</label>
