@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Auth from '../../lib/auth'
+import { headers } from '../../lib/headers'
 
 class ArticleEdit extends React.Component{
   state = {
@@ -39,6 +40,19 @@ class ArticleEdit extends React.Component{
     const data = { ...this.state.data, [e.target.name]: e.target.value }
     this.setState({ data })
   }
+// _______________________________________________________________________________________________________
+
+  handleDelete = async () => {
+    const articleId = this.props.match.params.id
+    try {
+      await axios.delete(`/api/articles/${articleId}`, this.state.data, headers)
+      
+      this.props.history.push('/articles')
+    
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   render(){
     return (
@@ -73,6 +87,7 @@ class ArticleEdit extends React.Component{
           </div> 
 
           <button onClick={this.handleSubmit}>Submit</button>
+          <button onClick={this.handleDelete}>Delete Article</button>
 
         </form>
         </div>
@@ -82,3 +97,4 @@ class ArticleEdit extends React.Component{
 }
 
 export default ArticleEdit
+
