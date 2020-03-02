@@ -10,4 +10,6 @@ const SecureRoute = ({ component: Component, ...rest }) => {
   
 }
 
+export default SecureRoute
+
 
