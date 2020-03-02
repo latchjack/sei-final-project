@@ -24,11 +24,13 @@ class ArticleShow extends React.Component {
     const { article } = this.state
     if (!article) return null
     return(
-      <div>
-        <h1>{article.title}</h1>
+      <section className="section">
+      <div className="SHOWPAGE">
+        <h1 className='is-size-1'>{article.title}</h1>
         <h6>This article was written by {article.owner} at {article.date}</h6>
         <p>{article.text}</p>
       </div>
+      </section>
     )
   }
 
