@@ -9,7 +9,7 @@ import Home from './components/common/Home'
 import Login from'./components/auth/Login'
 import Register from './components/auth/Register'
 import ArticleShow from './components/articlefolder/ArticleShow'
-import ArticleForm from './components/articlefolder/ArticleForm'
+import ArticleNew from './components/articlefolder/ArticleNew'
 
 class App extends React.Component {
   render() {
@@ -20,7 +20,7 @@ class App extends React.Component {
           <Switch>
             {/* <SecureRoute path="/articles/new" component={ArticleForm}/> */}
             <Route exact path="/" component={Home}/>
-            <Route path="/articles/new" component={ArticleForm}/>
+            <Route path="/articles/new" component={ArticleNew}/>
             <Route path="/articles/:id" component={ArticleShow}/> 
             <Route path="/articles" component={ArticleIndex}/>
             <Route path="/login" component={Login}/>
