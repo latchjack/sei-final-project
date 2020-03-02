@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+// import auth from '../auth/'
 
 class ArticleShow extends React.Component {
   state = {
