@@ -2,8 +2,7 @@ import React from 'react'
 import axios from 'axios'
 // import auth from '../auth/'
 import { headers } from '../../lib/headers'
-import CommentIndex from './CommentCard'
-// import CommentCard from './CommentCard'
+
 
 class ArticleShow extends React.Component {
   state = {
@@ -32,11 +31,8 @@ class ArticleShow extends React.Component {
     e.preventDefault()
     const articleId = this.props.match.params.id
     try {
-      console.log(articleId)
       await axios.post(`/api/articles/${articleId}/comments/`, this.state.data, headers)
-
       this.props.history.push(`/articles/${articleId}/comments/`)
-      // this.setState({ data: null, text: '' })
     } catch (err) {
       console.log(err)
     }
@@ -50,7 +46,7 @@ class ArticleShow extends React.Component {
   render() {
     const { article } = this.state
     if (!article) return null
-    console.log(this.state.article.comments)
+    console.log(this.state.article.id)
     return(
       <div className="section">
       <div className="container">
@@ -67,7 +63,7 @@ class ArticleShow extends React.Component {
               {this.state.article.comments.map(comment => (
                 <div className="container">
                   <div className="box">
-                  <p key={comment.id} {...comment}>{comment.text} </p>
+                  <p key={this.state.article.comments.id} {...comment}>{comment.text} </p>
                   </div>
                   </div> 
               ))}
