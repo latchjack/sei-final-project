@@ -48,7 +48,7 @@ class ArticleComment extends React.Component{
       <section className="section">
         <div className="columns">
           <form onSubmit={this.handleSubmit} className="column is-half">
-            <h2 className="title">Comment on article</h2>
+            {/* <h2 className="title">Comment on article</h2> */}
             <div className="field">
               <label className="label">Tell us your thoughts?</label>
               <div className="control">
@@ -56,7 +56,7 @@ class ArticleComment extends React.Component{
                   className="input"
                   name="comments"
                   required
-                  placeholder="Comment"
+                  placeholder="Comment on this article"
                   onChange={this.handleChange}               
                 />
               </div>

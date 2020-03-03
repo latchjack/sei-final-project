@@ -11,7 +11,7 @@ class ArticleShow extends React.Component {
     articleOwner: '',
     username:'',
     data:{
-    text: 'this'
+    text: ''
     }
   }
 
@@ -73,8 +73,8 @@ class ArticleShow extends React.Component {
       </div>
       <div className="section">
       <div className="container">
+      <div className="column">
       <div className="field">
-            <label className="label">Add a Comment</label>
             <div className="control">
               <input 
                 className="input"
@@ -86,6 +86,7 @@ class ArticleShow extends React.Component {
               />
             </div>
             <button onClick={this.handleSubmit} >Submit Comment</button>
+          </div>
           </div>
       </div>
       </div>

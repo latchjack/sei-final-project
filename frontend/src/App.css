@@ -17,21 +17,32 @@
   font-weight: bolder;
   }
 .easier {
-  /* border: 2px solid red; */
   width: 15px;
 }
 .article-card {
   background-color: rgb(219, 219, 219);
 }
+<<<<<<< HEAD
 .article-card-button, #articleNewBox > div > form > button {
+=======
+
+button, #articleNewBox > div > form > button {
+>>>>>>> development
   background-color: rgb(230, 172, 14);
+  color: black;
   border-radius: 3px;
   padding: 10px 20px;
   font-weight: 700;
+  margin: 10px 0 10px 0;
 }
+<<<<<<< HEAD
 .article-card-button:hover, #articleNewBox > div > form > button:hover {
+=======
+
+button:hover, #articleNewBox > div > form > button:hover {
+>>>>>>> development
   background-color: rgb(39, 39, 39);
-  box-shadow: 0px 0px 44px -8px rgba(102,102,102,1);
+  color: white;
 }
 #root > main > nav > div > div.navbar-brand > a {
   background-color: rgb(54, 54, 54);
@@ -72,6 +83,7 @@
   color: rgb(230, 172, 14);
 }
 
+<<<<<<< HEAD
 
 /* 
 .App {
@@ -107,3 +119,8 @@
     transform: rotate(360deg);
   }
 } */
+=======
+.dropDown {
+  cursor: pointer;
+}
+>>>>>>> development
