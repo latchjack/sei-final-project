@@ -22,13 +22,15 @@ class ArticleIndex extends React.Component {
     if(!this.state.articles.length) return null
     return (
       <>
-
-        <div>
-          {this.state.articles.map(article => (
-            <ArticleCard key={article.id} {...article} />
-          ))}
+        <div className="section">
+          <div className="container">
+            <div className="columns is-multiline is-2 ">
+              {this.state.articles.map(article => (
+                <ArticleCard key={article.id} {...article} />
+              ))}
+            </div>
+          </div>
         </div>
-
       </>
     )
   }

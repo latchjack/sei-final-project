@@ -1,5 +1,6 @@
 * {
   font-family: 'Rubik', ;
+  color: black;
 }
 .hero-body {
   background-image: url('https://www.keendevelopers.com/wp-content/uploads/2019/04/website-design-background.png');
@@ -16,6 +17,23 @@
   font-weight: bolder;
   }
 
+.easier {
+  /* border: 2px solid red; */
+  width: 15px;
+}
+
+.article-card-title {
+  
+}
+
+.article-card-owner {}
+
+.article-card-button {
+  background-color: rgb(230, 172, 14);
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
 
 
 
