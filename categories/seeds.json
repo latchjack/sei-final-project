@@ -3,35 +3,14 @@
   "model": "categories.category",
   "pk": 1,
   "fields": {
-    "category_name": "Technology"
+    "category_name": "Tedchnology"
   }
 },
 {
   "model": "categories.category",
   "pk": 2,
   "fields": {
-    "category_name": "Software Development"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 3,
-  "fields": {
     "category_name": "Careers"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 4,
-  "fields": {
-    "category_name": "Culture"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 5,
-  "fields": {
-    "category_name": "Frameworks"
   }
 }
 ]
