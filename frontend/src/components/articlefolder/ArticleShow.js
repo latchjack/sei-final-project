@@ -51,8 +51,8 @@ class ArticleShow extends React.Component {
       <div className="section">
       <div className="container">
         <div className="box">
-        <h1 className='is-size-1'>{article.title}</h1>
-        <h6>This article was written by {article.owner} at {article.date}</h6>
+        <h1 className="title is-2">{article.title}</h1>
+        <h6 className="subtitle is-6">This article was written by {article.owner}</h6>
         <p>{article.text}</p>
       </div>
       </div>
