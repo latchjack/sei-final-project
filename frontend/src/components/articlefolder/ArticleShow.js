@@ -3,7 +3,6 @@ import axios from 'axios'
 // import auth from '../auth/'
 import { headers } from '../../lib/headers'
 
-
 class ArticleShow extends React.Component {
   state = {
     article: null,

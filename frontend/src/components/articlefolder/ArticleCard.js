@@ -6,7 +6,7 @@ const ArticleCard = ({ title, id, owner }) => (
     <div className="box article-card">
     <Link to={`/articles/${id}`}>
       <h1 className="article-card-title title is-4">{title}</h1>
-      <h6 className="article-card-owner subtitle is-7">Article created by {owner.username}</h6>
+      {/* <h6 className="article-card-owner subtitle is-7">Article created by {owner.username}</h6> */}
       {/* <h6>{categories}</h6> */}
     </Link>
     

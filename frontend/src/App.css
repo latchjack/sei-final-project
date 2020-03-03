@@ -41,6 +41,16 @@
   background-color: rgb(54, 54, 54);
   color: rgb(230, 172, 14);
 }
+
+#root > main > nav > div > div.navbar-menu > div > span {
+  color: rgb(230, 172, 14);
+}
+
+#root > main > nav > div > div.navbar-menu > div > span:hover {
+  background-color: rgb(54, 54, 54);
+  color: rgb(230, 172, 14);
+}
+
 .navbar-item {
   color: rgb(219, 219, 219);
 }
@@ -52,13 +62,17 @@
   background-color: rgb(47, 47, 47);
   color: rgb(230, 172, 14);
 }
+
 #articleNewBox {
   background-color: rgb(219, 219, 219);
 }
+
 #root > main > nav > div > div.navbar-menu > div > a:hover, #root > main > nav > div > div.navbar-brand > a:hover {
   background-color: rgb(47, 47, 47);
   color: rgb(230, 172, 14);
 }
+
+
 /* 
 .App {
   text-align: center;
