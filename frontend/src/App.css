@@ -22,6 +22,10 @@
   width: 15px;
 }
 
+.article-card {
+  background-color: rgb(219, 219, 219);
+}
+
 .article-card-button {
   background-color: rgb(230, 172, 14);
   border-radius: 3px;
@@ -33,7 +37,14 @@
   color: rgb(219, 219, 219);
 }
 
+.hori {
+  background-color: black;
+  margin-bottom: 10px;
+}
 
+#root > main > nav > div > div.navbar-menu.is-active {
+  background-color: hsl(0, 0%, 29%);
+}
 
 
 
