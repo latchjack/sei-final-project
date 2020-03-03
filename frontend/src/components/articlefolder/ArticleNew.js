@@ -1,16 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 import auth from '../../lib/auth'
-
 class ArticleNew extends React.Component {
-  
   state = {
     data: {
       title: '',
       text: ''
     }     
   }
-
   handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
@@ -19,7 +16,6 @@ class ArticleNew extends React.Component {
     // const data = ({ ...this.state.data })
     // this.setState({ data })
   }
-
   handleSubmit = async e => {
     e.preventDefault() 
     try {
@@ -31,10 +27,11 @@ class ArticleNew extends React.Component {
       console.log(err)
     }
   }
-
   render() {
     console.log(this.state.data)
     return(
+      <div className="section">
+      <div className="container">
       <div className="box" id="articleNewBox">
           <div className="columns">
             <form onSubmit={this.handleSubmit} className="column is-half is-offset-one-quarter">
@@ -45,7 +42,6 @@ class ArticleNew extends React.Component {
                   <input 
                     className="input"
                     name="title"
-                  
                     placeholder="The title of this article.."
                     onChange={this.handleChange}
                     value={this.state.data.title}
@@ -65,15 +61,13 @@ class ArticleNew extends React.Component {
                   />
                 </div>
               </div> 
-
-              
               <button type="submit" className="button is-fullwidth is-link">Publish!!</button>
-            
             </form>
           </div>
         </div>
+      </div>
+      </div>
     )
   }
 }
-
 export default ArticleNew
