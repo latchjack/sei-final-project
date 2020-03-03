@@ -31,9 +31,10 @@ class ArticleShow extends React.Component {
     const articleId = this.props.match.params.id
     try {
       await axios.post(`/api/articles/${articleId}/comments/`, this.state.data, headers)
-      this.props.history.push(`/articles/${articleId}/comments/`)
-
-    } catch (err) {
+      // this.props.history.push(`/articles/${articleId}/comments/`)
+        const res = await axios.get(`/api/articles/${articleId}`)
+        this.setState({ article: res.data })
+      } catch (err) {
       console.log(err)
     }
   }
@@ -46,14 +47,14 @@ class ArticleShow extends React.Component {
   render() {
     const { article } = this.state
     if (!article) return null
-    console.log(this.state.article.categories)
+    console.log(this.state.data.text)
     return(
       <div className="section">
       <div className="container">
         <div className="box">
         <h1 className="title is-2">{article.title}</h1>
         <h6 className="subtitle is-6">This article was written by {article.owner.username}</h6>
-        <h6 className="subtitle is-7"> Article category: {this.state.article.categories}</h6>
+        <h6 className="subtitle is-7"> Article category: {this.state.article.categories[0].category_name}</h6>
         <p>{article.text}</p>
       </div>
       </div>
