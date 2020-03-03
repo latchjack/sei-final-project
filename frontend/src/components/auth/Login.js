@@ -21,21 +21,23 @@ class Login extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault()
+    console.log(this.state.data)
     try {
-      console.log(this.state.data)
-      const res = await axios.post('/api/login/', this.state.data, headers)
-      
+      const res = await axios.post('/api/login/', this.state.data)
       Auth.setToken(res.data.token)
+      console.log('tok', res.data.token)
+
       this.props.history.push('/articles')
       
     } catch (err) {
+      console.log(err.response.data)
       this.setState({ error: 'Incorrect Credentials' })
     }
     
   }
 
   render() {
-    console.log(this.state.data)
+    // console.log(this.state.data)
     return (
       <section className="section">
         <div className="container">
