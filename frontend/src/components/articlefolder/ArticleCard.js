@@ -12,7 +12,7 @@ const ArticleCard = ({ title, date, id, categories, owner, handleDelete }) => (
     </Link>
     
       <hr />
-    <div className="">
+    <div className="is-offset-3">
       <Link to={`/articles/${id}/edit/`}><button className="article-card-button">Edit Article</button></Link>
     </div>
   </div>

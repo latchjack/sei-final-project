@@ -21,7 +21,6 @@ class App extends React.Component {
         <main>
           <Navbar/>
           <Switch>
-            <Route exact path="/" component={Home}/>
             <SecureRoute path="/articles/new" component={ArticleNew}/>
             <SecureRoute path="/articles/:id/edit" component={ArticleEdit}/>
             <Route path="/articles/:id" component={ArticleShow}/> 
@@ -29,6 +28,7 @@ class App extends React.Component {
             <Route path="/about" component={About}/>
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
+            <Route exact path="/" component={Home}/>
           </Switch>
           </main>
         </BrowserRouter>

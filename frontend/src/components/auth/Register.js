@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { headers } from './../../lib/headers'
 
 class Register extends React.Component {
 
@@ -9,8 +10,7 @@ class Register extends React.Component {
       password_confirmation: '',
       username: '',
       email: ''
-    },
-    errors: {}
+    }
     
   }
 
@@ -20,11 +20,10 @@ class Register extends React.Component {
   }
 
   handleSubmit = async e => {
-    console.log('now')
+    console.log(headers.common)
     e.preventDefault()
     try {
-      await axios.post('/api/register/', this.state.data)
-      this.props.history.push('/login') 
+      await axios.post('/api/register/', this.state.data, headers.common)
     } catch (err) {
       this.setState({ errors: err.response.data.errors })
     }
@@ -42,7 +41,7 @@ class Register extends React.Component {
               <label className="label">Username</label>
               <div className="control has-icons-left">
               <input 
-                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
+                      // className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Username"
                       required
                       name="username"
@@ -57,7 +56,7 @@ class Register extends React.Component {
               <label className="label">Email</label>
               <div className="control has-icons-left">
               <input 
-                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
+                      // className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Email"
                       required
                       name="email"
@@ -72,7 +71,7 @@ class Register extends React.Component {
               <label className="label">Password</label>
               <div className="control has-icons-left">
               <input 
-                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
+                      // className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Password"
                       required
                       name="password"
@@ -88,7 +87,7 @@ class Register extends React.Component {
               <label className="label">Password Confirmation</label>
               <div className="control has-icons-left">
               <input 
-                      className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
+                      // className={`input ${this.state.errors.username ? 'is-danger' : ''}`}
                       placeholder="Password Confirmation"
                       required
                       type="password"
@@ -99,7 +98,7 @@ class Register extends React.Component {
                       <i className="fas fa-lock-open"></i>
                     </span>
               </div>
-              {this.state.errors.password_confirmation && <small className="help is-danger">{this.state.errors.password_confirmation}</small>}
+              {/* {this.state.errors.password_confirmation && <small className="help is-danger">{this.state.errors.password_confirmation}</small>} */}
             </div>
             <div className="field">
               <button type="submit" className="button is-fullwidth has-background-dark has-text-white">Register Me</button>
