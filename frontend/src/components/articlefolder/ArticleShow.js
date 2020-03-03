@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 // import auth from '../auth/'
 import { headers } from '../../lib/headers'
+import CommentIndex from './CommentCard'
+// import CommentCard from './CommentCard'
 
 class ArticleShow extends React.Component {
   state = {
@@ -9,6 +11,7 @@ class ArticleShow extends React.Component {
     save: false,
     text: '',
     articleOwner: '',
+    username:'',
     data:{
     text: 'this'
     }
@@ -47,16 +50,30 @@ class ArticleShow extends React.Component {
   render() {
     const { article } = this.state
     if (!article) return null
+    console.log(this.state.article.comments)
     return(
       <div className="section">
       <div className="container">
         <div className="box">
         <h1 className="title is-2">{article.title}</h1>
-        <h6 className="subtitle is-6">This article was written by {article.username}</h6>
+        <h6 className="subtitle is-6">This article was written by {article.owner.username}</h6>
         <p>{article.text}</p>
       </div>
       </div>
-
+      <div className="section">
+      <div className="container">
+      <h2>Article Comments</h2>
+      <div className="column">
+              {this.state.article.comments.map(comment => (
+                <div className="container">
+                  <div className="box">
+                  <p key={comment.id} {...comment}>{comment.text} </p>
+                  </div>
+                  </div> 
+              ))}
+            </div>
+      </div>
+      </div>
       <div className="section">
       <div className="container">
       <div className="field">
