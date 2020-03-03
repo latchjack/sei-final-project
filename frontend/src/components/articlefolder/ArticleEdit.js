@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Auth from '../../lib/auth'
+// import Auth from '../../lib/auth'
 import { headers } from '../../lib/headers'
 
 class ArticleEdit extends React.Component{
@@ -26,10 +26,9 @@ class ArticleEdit extends React.Component{
     //e.preventDefault()
     const articleId = this.props.match.params.id
     try {
-      await axios.put(`/api/articles/${articleId}/`, this.state.data,
-        {
-          headers: { Authorization: `Bearer ${Auth.getToken()}` }
-        })
+      await axios.put(`/api/articles/${articleId}/`, this.state.data, headers)
+
+      this.props.history.push('/articles')
       // this.setState({ data: null, text: '' })
     } catch (err) {
       console.log(err)

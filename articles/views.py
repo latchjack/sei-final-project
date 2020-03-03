@@ -63,7 +63,7 @@ class CommentListView(APIView):
   def post(self, request, pk):
     request.data['article'] = pk
     request.data['owner'] = request.user.id
-
+    print(request.data)
     comment = CommentSerializer(data=request.data)
 
     if comment.is_valid():
