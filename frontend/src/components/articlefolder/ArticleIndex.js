@@ -24,6 +24,11 @@ class ArticleIndex extends React.Component {
       <>
         <div className="section">
           <div className="container">
+            <h1 className="title is-1 has-text-centered">Articles</h1>
+          </div>
+        </div>
+        <div className="section">
+          <div className="container">
             <div className="columns is-multiline is-2 ">
               {this.state.articles.map(article => (
                 <ArticleCard key={article.id} {...article} />
