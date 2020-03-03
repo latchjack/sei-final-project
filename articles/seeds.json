@@ -1,12 +1,51 @@
 [
 {
   "model": "articles.article",
-  "pk": 1,
+  "pk": 2,
   "fields": {
     "title": "Article 1",
+    "owner": 6,
+    "date": "2020-03-03T14:19:09Z",
+    "text": "This is Article 1. Article 1 is about Article 1",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 3,
+  "fields": {
+    "title": "Article 2",
     "owner": 2,
-    "date": "2020-03-03T12:42:32Z",
-    "text": "Article 1 by Jeff",
+    "date": "2020-03-03T14:19:23Z",
+    "text": "This is Article 2. Article 2 is about Article 2",
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 4,
+  "fields": {
+    "title": "Article 3",
+    "owner": 2,
+    "date": "2020-03-03T14:19:41Z",
+    "text": "This is Article 3. Article 3 is about Article 3",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 5,
+  "fields": {
+    "title": "Article 4",
+    "owner": 4,
+    "date": "2020-03-03T14:20:03Z",
+    "text": "This is Article 4. Article 4 is about Article 4",
     "categories": [
       1,
       2
@@ -14,21 +53,16 @@
   }
 },
 {
-  "model": "articles.comment",
-  "pk": 1,
+  "model": "articles.article",
+  "pk": 6,
   "fields": {
-    "text": "Wow love the article!",
-    "owner": 3,
-    "article": 1
-  }
-},
-{
-  "model": "articles.like",
-  "pk": 1,
-  "fields": {
-    "like": 1,
-    "owner": 1,
-    "article": 1
+    "title": "Article 5",
+    "owner": 8,
+    "date": "2020-03-03T14:20:29Z",
+    "text": "This is Article 5. Article 5 is about Article 5",
+    "categories": [
+      1
+    ]
   }
 }
 ]
