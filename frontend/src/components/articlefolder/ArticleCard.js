@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ArticleCard = ({ title, date, id, categories, owner, handleDelete }) => (
+const ArticleCard = ({ title, id, owner, categories }) => (
   <div key={id} className="column easier is-two-fifths is-offset-1 ">
     <div className="box">
     <Link to={`/articles/${id}`}>
-      <h1 className="article-card-title">{title}</h1>
-      <h6 className="article-card-owner">Article created by {owner}</h6>
-      {/* <h6 className="article_date">{date}</h6> */}
-      <h6>{categories}</h6>
+      <h1 className="article-card-title title is-4">{title}</h1>
+      <h6 className="article-card-owner subtitle is-7">Article created by {owner}</h6>
+      {/* <h6>{categories}</h6> */}
     </Link>
     
       <hr />

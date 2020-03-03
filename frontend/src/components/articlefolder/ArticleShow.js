@@ -47,12 +47,16 @@ class ArticleShow extends React.Component {
     const { article } = this.state
     if (!article) return null
     return(
-      <section className="section">
-      <div className="SHOWPAGE">
+      <div className="section">
+      <div className="container">
+        <div className="box">
         <h1 className='is-size-1'>{article.title}</h1>
         <h6>This article was written by {article.owner} at {article.date}</h6>
         <p>{article.text}</p>
       </div>
+      </div>
+
+      <div className="section">
       <div className="container">
       <div className="field">
             <label className="label">Add a Comment</label>
@@ -67,9 +71,11 @@ class ArticleShow extends React.Component {
               />
             </div>
             <button onClick={this.handleSubmit}>Submit Comment</button>
-          </div> 
+          </div>
+          
       </div>
-      </section>
+      </div>
+      </div>
     )
   }
 
