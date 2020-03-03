@@ -30,4 +30,5 @@ class LikeSerializer(serializers.ModelSerializer):
 class PopulatedArticleSerializer(ArticleSerializer):
       comments = PopulatedCommentSerializer(many=True)
       likes = LikeSerializer(many=True)
+      owner = UserSerializer()
 
