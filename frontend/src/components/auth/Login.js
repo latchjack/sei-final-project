@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-
-import auth from '../../lib/auth'
+import Auth from '../../lib/auth'
 import { headers } from '../../lib/headers'
 
 class Login extends React.Component {
@@ -26,7 +25,7 @@ class Login extends React.Component {
       console.log(this.state.data)
       const res = await axios.post('/api/login/', this.state.data, headers)
       
-      auth.setToken(res.data.token)
+      Auth.setToken(res.data.token)
       this.props.history.push('/articles')
       
     } catch (err) {
