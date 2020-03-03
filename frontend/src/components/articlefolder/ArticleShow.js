@@ -31,6 +31,7 @@ class ArticleShow extends React.Component {
     try {
       console.log(articleId)
       await axios.post(`/api/articles/${articleId}/comments/`, this.state.data, headers)
+
       this.props.history.push(`/articles/${articleId}/comments/`)
       // this.setState({ data: null, text: '' })
     } catch (err) {
@@ -72,7 +73,6 @@ class ArticleShow extends React.Component {
             </div>
             <button onClick={this.handleSubmit}>Submit Comment</button>
           </div>
-          
       </div>
       </div>
       </div>
