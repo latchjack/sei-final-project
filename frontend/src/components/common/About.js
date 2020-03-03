@@ -7,8 +7,9 @@ class About extends React.Component {
   render() {
     return (
       <>
-      <section className="FAQPage">
-        <span className='styleLogo'><h1>Pensive</h1></span>
+      <div className="section">
+        <div className='container has-text-centered title is-1'><h1>Pensive</h1>
+      </div>
         <div className="box" id="aboutBox">
           <h1 className=" title is-3">ABOUT US</h1>
           <hr/>
@@ -30,7 +31,7 @@ class About extends React.Component {
             </Collapsible>
           </div>
         </div>
-      </section>
+      </div>
       </>
     )
   }

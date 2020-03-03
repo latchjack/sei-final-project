@@ -6,8 +6,4 @@ class CategorySerializer(serializers.ModelSerializer):
     model = Category
     fields = '__all__'
 
-class PopulatedCategorySerializer(serializers.ModelSerializer):
-  class Meta:
-    model = Category
-    fields = '__all__'
 
