@@ -35,6 +35,8 @@ class ArticleNew extends React.Component {
   render() {
     console.log(this.state.data)
     return(
+      <div className="section">
+      <div className="container">
       <div className="box" id="articleNewBox">
           <div className="columns">
             <form onSubmit={this.handleSubmit} className="column is-half is-offset-one-quarter">
@@ -72,6 +74,8 @@ class ArticleNew extends React.Component {
             </form>
           </div>
         </div>
+      </div>
+      </div>
     )
   }
 }

@@ -2,8 +2,6 @@ import React from 'react'
 import axios from 'axios'
 // import auth from '../auth/'
 import { headers } from '../../lib/headers'
-import CommentIndex from './CommentCard'
-// import CommentCard from './CommentCard'
 
 class ArticleShow extends React.Component {
   state = {

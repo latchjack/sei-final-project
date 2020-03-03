@@ -26,11 +26,26 @@
   background-color: rgb(219, 219, 219);
 }
 
-.article-card-button {
+.article-card-button, #articleNewBox > div > form > button {
   background-color: rgb(230, 172, 14);
   border-radius: 3px;
   padding: 10px 20px;
   font-weight: 700;
+}
+
+.article-card-button:hover, #articleNewBox > div > form > button:hover {
+  background-color: rgb(39, 39, 39);
+  box-shadow: 0px 0px 44px -8px rgba(102,102,102,1);
+}
+
+#root > main > nav > div > div.navbar-brand > a {
+  background-color: rgb(54, 54, 54);
+  color: rgb(230, 172, 14);
+}
+
+#root > main > nav > div > div.navbar-menu > div > a {
+  background-color: rgb(54, 54, 54);
+  color: rgb(230, 172, 14);
 }
 
 .navbar-item {
@@ -43,12 +58,18 @@
 }
 
 #root > main > nav > div > div.navbar-menu.is-active {
-  background-color: hsl(0, 0%, 29%);
+  background-color: rgb(47, 47, 47);
+  color: rgb(230, 172, 14);
 }
 
+#articleNewBox {
+  background-color: rgb(219, 219, 219);
+}
 
-
-
+#root > main > nav > div > div.navbar-menu > div > a:hover, #root > main > nav > div > div.navbar-brand > a:hover {
+  background-color: rgb(47, 47, 47);
+  color: rgb(230, 172, 14);
+}
 
 
 /* 
