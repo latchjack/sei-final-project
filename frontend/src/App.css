@@ -48,6 +48,15 @@
   color: rgb(230, 172, 14);
 }
 
+#root > main > nav > div > div.navbar-menu > div > span {
+  color: rgb(230, 172, 14);
+}
+
+#root > main > nav > div > div.navbar-menu > div > span:hover {
+  background-color: rgb(54, 54, 54);
+  color: rgb(230, 172, 14);
+}
+
 .navbar-item {
   color: rgb(219, 219, 219);
 }
