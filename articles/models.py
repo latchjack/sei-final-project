@@ -11,7 +11,7 @@ class Article(models.Model):
   title = models.CharField(max_length=50)
   owner = models.ForeignKey(User, related_name='articles', null=True, on_delete=models.CASCADE)
   date = models.DateTimeField(default=timezone.now)
-  text = models.CharField(max_length=1000)
+  text = models.CharField(max_length=3000)
   categories = models.ManyToManyField('categories.Category', related_name='categories', blank=True)
 
 
