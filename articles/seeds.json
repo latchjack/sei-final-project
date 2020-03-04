@@ -1,12 +1,26 @@
 [
 {
   "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "title": "The Parallel Threads of Life and Programming",
+    "owner": 2,
+    "date": "2020-03-04T09:14:40Z",
+    "text": "I\u2019m convinced our deepest desire is, by paying the cost of time, to be shown a glimmer of some fundamental truth about the universe. To hear it whisper its lessons and point towards its purpose. And, if you look hard enough for these lessons, you will find them. Whether they are a manifestation of your mind or can be held in your hand, once you see them, they remain yours forever. Programming offers significant parallels to life. We are tasked with creating something\u2013something whose sum feels more significant than the parts. Like life, it is a test of bounded creativity. There are rules we must follow, some we should follow, and others we are free to ignore. Programming offers us a glimpse, however ephemeral it may be, into some fundamental truths about the world in which we reside. The Four Parallels Between Programming and Life Iteration is progress. Did you know, if you started the month with a single penny and it doubled every day, you would have $163 on the 15th of the month? Sure",
+    "categories": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
   "pk": 2,
   "fields": {
-    "title": "Article 1",
-    "owner": 6,
-    "date": "2020-03-03T14:19:09Z",
-    "text": "This is Article 1. Article 1 is about Article 1",
+    "title": "Command line tricks for managing your messy open s",
+    "owner": 3,
+    "date": "2020-03-04T09:18:18Z",
+    "text": "Effective collaboration, especially in open source software development, starts with effective organization. To make sure that nothing gets missed, the general rule, \u201cone issue, one pull request\u201d is a nice rule of thumb. Instead of opening an issue with a large scope like, \u201cFix all the broken links in the documentation,\u201d open source projects will have more luck attracting contributors with several smaller and more manageable issues. In the preceding example, you might scope broken links by section or by page. This allows more contributors to jump in and dedicate small windows of their time, rather than waiting for one person to take on a larger and more tedious contribution effort. Smaller scoped issues also help project maintainers see where work has been completed and where it hasn\u2019t. This reduces the chances that some part of the issue is missed, assumed to be completed, and later leads to bugs or security vulnerabilities. That\u2019s all well and good. But what if you\u2019ve already opened",
     "categories": [
       1
     ]
@@ -16,10 +30,10 @@
   "model": "articles.article",
   "pk": 3,
   "fields": {
-    "title": "Article 2",
-    "owner": 2,
-    "date": "2020-03-03T14:19:23Z",
-    "text": "This is Article 2. Article 2 is about Article 2",
+    "title": "Multithreaded Python: slithering through an I/O bo",
+    "owner": 3,
+    "date": "2020-03-04T09:21:35Z",
+    "text": "How taking advantage of parallelism in Python can make your software orders of magnitude faster. I recently developed a project that I called Hydra: a multithreaded link checker written in Python. Unlike many Python site crawlers I found while researching, Hydra uses only standard libraries, with no external dependencies like BeautifulSoup. It\u2019s intended to be run as part of a CI/CD process, so part of its success depended on being fast. Multiple threads in Python is a bit of a bitey subject (not sorry) in that the Python interpreter doesn\u2019t actually let multiple threads execute at the same time. Python\u2019s Global Interpreter Lock, or GIL, prevents multiple threads from executing Python bytecodes at once. Each thread that wants to execute must first wait for the GIL to be released by the currently executing thread. The GIL is pretty much the microphone in a low-budget conference panel, except where no one gets to shout. This has the advantage of preventing race conditions.",
     "categories": [
       1
     ]
@@ -29,12 +43,12 @@
   "model": "articles.article",
   "pk": 4,
   "fields": {
-    "title": "Article 3",
-    "owner": 2,
-    "date": "2020-03-03T14:19:41Z",
-    "text": "This is Article 3. Article 3 is about Article 3",
+    "title": "How to create an analytics dashboard in a Django a",
+    "owner": 4,
+    "date": "2020-03-04T09:23:27Z",
+    "text": "Hi folks! Python, data visualization, and programming are the topics I'm profoundly devoted to. That\u2019s why I\u2019d like to share with you my ideas as well as my enthusiasm for discovering new ways to present data in a meaningful way. The case I'm going to cover is quite common: you have data on the back end of your app and want to give it shape on the front end. If such a situation sounds familiar to you, then this tutorial may come in handy. After you complete it, you\u2019ll have a Django-powered app with interactive pivot tables & charts.",
     "categories": [
-      2
+      3
     ]
   }
 },
@@ -42,13 +56,13 @@
   "model": "articles.article",
   "pk": 5,
   "fields": {
-    "title": "Article 4",
-    "owner": 4,
-    "date": "2020-03-03T14:20:03Z",
-    "text": "This is Article 4. Article 4 is about Article 4",
+    "title": "Learning to code after 40: my first 100 days",
+    "owner": 5,
+    "date": "2020-03-04T09:24:52Z",
+    "text": "100 days. It only takes 21 to make a habit (depending on who you ask). You can't do something for 100 days without learning something about yourself. Whether it's something as simple as \"hey, I can stick with something\" to \"I can write an algorithm that calculates the square root of a chimp in motion\" or some other big thing.  It really doesn't matter what you learn, as long as you do. So what did I learn in the last 100 days? Well first, some stats:  Hours programmed: I have no idea. (Great stat huh?)It was well over 100 hours. If I had to guess, it was over 200. Some days I managed to get in 3 or 4 hours, but I'm not sure of the exact total. At the very least, it was an hour a day average.  Days missed: 3. I'm counting 3 days missed, because there a couple days where programming was insanely difficult, and I barely got anything done. It's normal, by the way, to miss days sometimes. Just try not to make a habit of it.",
     "categories": [
       1,
-      2
+      4
     ]
   }
 },
@@ -56,13 +70,67 @@
   "model": "articles.article",
   "pk": 6,
   "fields": {
-    "title": "Article 5",
-    "owner": 8,
-    "date": "2020-03-03T14:20:29Z",
-    "text": "This is Article 5. Article 5 is about Article 5",
+    "title": "Why hasn\u2019t AI changed the world yet?",
+    "owner": 6,
+    "date": "2020-03-04T09:27:37Z",
+    "text": "He ended up walking into a pole, cutting his forehead.  This inspired him to develop, along with a partner, Wewalk - a cane equipped with artificial intelligence (AI), that detects objects above chest level and pairs with apps including Google Maps and Amazon's Alexa, so the user can ask questions.  Jean Marc Feghali, who helped to develop the product, also has an eye condition. In his case his vision is severely impaired when the light is not good.  While the smart cane itself only integrates with basic AI functions right now, the aim is for Wewalk, to use information gathered from the gyroscope, accelerometer and compass installed inside the cane. It will used that data to understand more about how visually impaired people use the product and behave in general to create a far more sophisticated product using machine learning (an advanced form of AI).  This would include the creation of an AI voice service with Microsoft, specifically designed for visually-impaired people, and....",
     "categories": [
-      1
+      2,
+      4,
+      5
     ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 7,
+  "fields": {
+    "title": "10 signs a career in coding might be for you",
+    "owner": 7,
+    "date": "2020-03-04T09:29:29Z",
+    "text": "1. You're a problem-solving pro Lots of people will simply tolerate problems without looking for a proactive way to solve them, particularly if tolerating the problem is easier. If you don't take this approach, but actually enjoy the challenge of solving problems of all kinds, then that's a great sign that you could be suited to software development. If, in your desire to solve problems, you also take into account realistic constraints \u2013 such as timeframes and budgets \u2013 then this could be a real asset in your search for a career.  2. You have a passion for strategy games Yes, it can be true that gaming is good for you, particularly where strategy games are concerned. These help hone your ability to make decisions based on a number of relevant factors, taking into account both short and long-term consequences. As well as computer games, those who enjoy offline games like chess, bridge or risk, could also have an underlying aptitude for programming. At Net-a-porter, for example.....",
+    "categories": [
+      1,
+      2,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 1,
+  "fields": {
+    "text": "Wow! Great Piece \ud83d\udc4f",
+    "owner": 6,
+    "article": 1
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 2,
+  "fields": {
+    "text": "Bravo. Would love to see more writing like this  \u2764\ufe0f",
+    "owner": 7,
+    "article": 6
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 3,
+  "fields": {
+    "text": "I always wondered whether coding was for me. Thank you!",
+    "owner": 4,
+    "article": 7
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 4,
+  "fields": {
+    "text": "B-B-Brilliant \ud83d\ude0e",
+    "owner": 2,
+    "article": 3
   }
 }
 ]

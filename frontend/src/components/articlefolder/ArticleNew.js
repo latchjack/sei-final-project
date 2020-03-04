@@ -1,11 +1,13 @@
 import React from 'react'
 import axios from 'axios'
-import auth from '../../lib/auth'
+import Auth from '../../lib/auth'
+import { headers } from '../../lib/headers'
 class ArticleNew extends React.Component {
   state = {
     data: {
       title: '',
-      text: ''
+      text: '',
+      category:''
     }     
   }
   handleChange = (e) => {
@@ -19,10 +21,10 @@ class ArticleNew extends React.Component {
   handleSubmit = async e => {
     e.preventDefault() 
     try {
-      const res = await axios.post('/api/articles/', this.state.data, {
-        headers: { Authorization: `Bearer ${auth.getToken()}` }
-      })
-      this.props.history.push(`/articles/${res.data.id}`)
+      const res = await axios.post('/api/articles/', this.state.data, headers)
+      Auth.setToken(res.data.token)
+
+      this.props.history.push('/articles')
     } catch (err) {
       console.log(err)
     }
@@ -58,6 +60,19 @@ class ArticleNew extends React.Component {
                     placeholder="Write article here"
                     onChange={this.handleChange}
                     value={this.state.data.text}
+                  />
+                </div>
+              </div> 
+              <div className="field">
+                <label className="label">Category</label>
+                <div className="control">
+                  <input 
+                    className="input"
+                    name="category"
+                    required
+                    placeholder="What is this article about?"
+                    onChange={this.handleChange}
+                    value={this.state.data.category}
                   />
                 </div>
               </div> 

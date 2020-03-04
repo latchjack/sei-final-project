@@ -3,12 +3,40 @@
   "model": "categories.category",
   "pk": 1,
   "fields": {
-    "category_name": "Tedchnology"
+    "category_name": "Software Development"
   }
 },
 {
   "model": "categories.category",
   "pk": 2,
+  "fields": {
+    "category_name": "Technology"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 3,
+  "fields": {
+    "category_name": "Data Analytics"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "category_name": "Education"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 5,
+  "fields": {
+    "category_name": "Artificial Intelligence"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 6,
   "fields": {
     "category_name": "Careers"
   }
