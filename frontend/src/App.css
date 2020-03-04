@@ -16,11 +16,9 @@
   color: white;
   font-weight: bolder;
   }
-
 .easier {
   width: 15px;
 }
-
 .article-card {
   background-color: rgb(219, 219, 219);
 }
@@ -38,12 +36,10 @@ button:hover, #articleNewBox > div > form > button:hover {
   background-color: rgb(39, 39, 39);
   color: white;
 }
-
 #root > main > nav > div > div.navbar-brand > a {
   background-color: rgb(54, 54, 54);
   color: rgb(230, 172, 14);
 }
-
 #root > main > nav > div > div.navbar-menu > div > a {
   background-color: rgb(54, 54, 54);
   color: rgb(230, 172, 14);
@@ -61,12 +57,10 @@ button:hover, #articleNewBox > div > form > button:hover {
 .navbar-item {
   color: rgb(219, 219, 219);
 }
-
 .hori {
   background-color: black;
   margin-bottom: 10px;
 }
-
 #root > main > nav > div > div.navbar-menu.is-active {
   background-color: rgb(47, 47, 47);
   color: rgb(230, 172, 14);

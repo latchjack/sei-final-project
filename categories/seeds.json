@@ -3,84 +3,42 @@
   "model": "categories.category",
   "pk": 1,
   "fields": {
-    "category_name": "Python"
+    "category_name": "Software Development"
   }
 },
 {
   "model": "categories.category",
   "pk": 2,
   "fields": {
-    "category_name": "Comp Sci"
+    "category_name": "Technology"
   }
 },
 {
   "model": "categories.category",
   "pk": 3,
   "fields": {
-    "category_name": "Open Source"
+    "category_name": "Data Analytics"
   }
 },
 {
   "model": "categories.category",
   "pk": 4,
   "fields": {
-    "category_name": "JavaScript"
+    "category_name": "Education"
   }
 },
 {
   "model": "categories.category",
   "pk": 5,
   "fields": {
-    "category_name": "Career"
+    "category_name": "Artificial Intelligence"
   }
 },
 {
   "model": "categories.category",
   "pk": 6,
   "fields": {
-    "category_name": "Tech"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 7,
-  "fields": {
-    "category_name": "Tips"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 8,
-  "fields": {
-    "category_name": "Databases"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 9,
-  "fields": {
-    "category_name": "Java"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 10,
-  "fields": {
-    "category_name": "Machine Learning"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 11,
-  "fields": {
-    "category_name": "Hiring"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 12,
-  "fields": {
-    "category_name": "React"
+    "category_name": "Careers"
   }
 }
 ]

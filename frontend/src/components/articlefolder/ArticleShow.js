@@ -25,17 +25,18 @@ class ArticleShow extends React.Component {
       console.log(err)
     }
   }
+  
 
   handleSubmit = async (e) => {
     e.preventDefault()
     const articleId = this.props.match.params.id
     try {
-      console.log(articleId)
       await axios.post(`/api/articles/${articleId}/comments/`, this.state.data, headers)
-
-      this.props.history.push(`/articles/${articleId}/comments/`)
-      // this.setState({ data: null, text: '' })
-    } catch (err) {
+      // this.props.history.push(`/articles/${articleId}/comments/`)
+        const res = await axios.get(`/api/articles/${articleId}`)
+        this.setState({ article: res.data})
+        this.setState({ text: ''})
+      } catch (err) {
       console.log(err)
     }
   }
@@ -66,7 +67,7 @@ class ArticleShow extends React.Component {
               {this.state.article.comments.map(comment => (
                 <div className="container">
                   <div className="box">
-                  <p key={comment.id} {...comment}>{comment.text} </p>
+                  <p key={this.state.article.id} {...comment}>{comment.text} </p>
                   </div>
                   </div> 
               ))}
@@ -87,7 +88,7 @@ class ArticleShow extends React.Component {
                 value={this.state.data.text}
               />
             </div>
-            <button onClick={this.handleSubmit}>Submit Comment</button>
+            <button onClick={this.handleSubmit} >Submit Comment</button>
           </div>
           </div>
       </div>

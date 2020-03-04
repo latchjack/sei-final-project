@@ -1,16 +1,15 @@
 import React from 'react'
 import axios from 'axios'
-import auth from '../../lib/auth'
-
+import Auth from '../../lib/auth'
+import { headers } from '../../lib/headers'
 class ArticleNew extends React.Component {
-  
   state = {
     data: {
       title: '',
-      text: ''
+      text: '',
+      category:''
     }     
   }
-
   handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
@@ -19,19 +18,17 @@ class ArticleNew extends React.Component {
     // const data = ({ ...this.state.data })
     // this.setState({ data })
   }
-
   handleSubmit = async e => {
     e.preventDefault() 
     try {
-      const res = await axios.post('/api/articles/', this.state.data, {
-        headers: { Authorization: `Bearer ${auth.getToken()}` }
-      })
-      this.props.history.push(`/articles/${res.data.id}`)
+      const res = await axios.post('/api/articles/', this.state.data, headers)
+      Auth.setToken(res.data.token)
+
+      this.props.history.push('/articles')
     } catch (err) {
       console.log(err)
     }
   }
-
   render() {
     console.log(this.state.data)
     return(
@@ -47,7 +44,6 @@ class ArticleNew extends React.Component {
                   <input 
                     className="input"
                     name="title"
-                  
                     placeholder="The title of this article.."
                     onChange={this.handleChange}
                     value={this.state.data.title}
@@ -67,10 +63,20 @@ class ArticleNew extends React.Component {
                   />
                 </div>
               </div> 
-
-              
+              <div className="field">
+                <label className="label">Category</label>
+                <div className="control">
+                  <input 
+                    className="input"
+                    name="category"
+                    required
+                    placeholder="What is this article about?"
+                    onChange={this.handleChange}
+                    value={this.state.data.category}
+                  />
+                </div>
+              </div> 
               <button type="submit" className="button is-fullwidth is-link">Publish!!</button>
-            
             </form>
           </div>
         </div>
@@ -79,5 +85,4 @@ class ArticleNew extends React.Component {
     )
   }
 }
-
 export default ArticleNew
