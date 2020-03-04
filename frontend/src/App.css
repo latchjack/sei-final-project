@@ -32,6 +32,10 @@ button, #articleNewBox > div > form > button {
   margin: 10px 0 10px 0;
 }
 
+#root > main > div:nth-child(3) > div > div > div > div > div {
+  height: 200px;
+}
+
 button:hover, #articleNewBox > div > form > button:hover {
   background-color: rgb(39, 39, 39);
   color: white;
