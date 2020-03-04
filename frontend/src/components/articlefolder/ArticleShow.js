@@ -48,14 +48,14 @@ class ArticleShow extends React.Component {
   render() {
     const { article } = this.state
     if (!article) return null
-    console.log(this.state.article)
+    const cats = this.state.article.categories[0]
     return(
       <div className="section">
       <div className="container">
         <div className="box">
         <h1 className="title is-2">{article.title}</h1>
         <h6 className="subtitle is-6">This article was written by {article.owner.username}</h6>
-        <h6 className="subtitle is-6">Categories: {this.state.article.categories[0].category_name}</h6>
+        {cats && <h6 className="subtitle is-6">Categories: {this.state.article.categories[0].category_name}</h6> }
         <p>{article.text}</p>
       </div>
       </div>
