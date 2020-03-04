@@ -1,25 +1,34 @@
 [
 {
   "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "title": "Want to learn Python?",
+    "owner": 2,
+    "date": "2020-03-04T10:00:50Z",
+    "text": "Python is a popular, versatile and easy-to-learn language. It's the go-to language for AI, Machine Learning and Data Science. Some say it's also the easiest programming language to get started with.  If this sounds like a programming language you want to learn, keep reading! Over the next few paragraphs, I'll guide you through the free 4-hour interactive Python course that we launched today. This course aims to give you a solid foundation in both Python and basic programming in general. It's great for beginners looking for an interactive and engaging way to learn to code.  The course has been created by our brilliant teacher Olof Paulson, who's one of the advocates for the Khan Academy in Swedish. Olof has a background in finance, is experienced in writing algorithms and has a passion for open and accessible education.  Now let's have a look at how the course is laid out!",
+    "categories": []
+  }
+},
+{
+  "model": "articles.article",
   "pk": 2,
   "fields": {
-    "title": "Article 1",
-    "owner": 6,
-    "date": "2020-03-03T14:19:09Z",
-    "text": "This is Article 1. Article 1 is about Article 1",
-    "categories": [
-      1
-    ]
+    "title": "8 Coolest Python Programming Language Features",
+    "owner": 3,
+    "date": "2020-03-04T10:03:14Z",
+    "text": "After writing nearly 20 articles just about Python, I\u2019ve decided to take some time to reflect on what I\u2019ve learned. For instance, I recently wrote a compilation article which includes 70+ Python code snippets. Now, I\u2019ve put together a list of some of the coolest Python programming language features.  Coolest Python Features List And without further ado, let\u2019s take a look at some of the coolest Python features. If you think I\u2019ve missed any, feel free to drop them in the comments.  List Comprehensions By far, my favorite feature in Python is the list comprehension. Honestly, the feature isn\u2019t all that interesting; it\u2019s just a convenient way to generate lists. That said, it\u2019s a feature that I haven\u2019t seen in any other popular language (e.g. Java, C, C++, etc.). As a result, I make sure to take advantage of it as often as possible. Here are a few examples..",
+    "categories": []
   }
 },
 {
   "model": "articles.article",
   "pk": 3,
   "fields": {
-    "title": "Article 2",
-    "owner": 2,
-    "date": "2020-03-03T14:19:23Z",
-    "text": "This is Article 2. Article 2 is about Article 2",
+    "title": "The Art of Routing in Flask",
+    "owner": 4,
+    "date": "2019-10-13T10:05:47Z",
+    "text": "It's hard to imagine a more critical feature of web frameworks than routing: the humble act of mapping URLs to actions, such as serving pages or data. It isn't often you find somebody sad or miserable enough to expand on such an inglorious feature. As it turns out, I am apparently both and miserable enough to be the kind of person who writes tutorials about routing.  At first glance, it's hard to imagine routing to be an \"art.\" We'll typically reserve a URL path, such as / or /home, associate this with a page template, and serve said template to the user, perhaps with added business logic. That perspective works fine for small-scale applications, but meaningful applications (or APIs) aren't static one-to-one mappings. Apps are a medium for data such as user-generated content such as user profiles or author posts, and routes define the way our users will access data which is always changing. To build products larger than ourselves, we need to arm them with the ability to grow in ways we",
     "categories": [
       1
     ]
@@ -29,23 +38,10 @@
   "model": "articles.article",
   "pk": 4,
   "fields": {
-    "title": "Article 3",
-    "owner": 2,
-    "date": "2020-03-03T14:19:41Z",
-    "text": "This is Article 3. Article 3 is about Article 3",
-    "categories": [
-      2
-    ]
-  }
-},
-{
-  "model": "articles.article",
-  "pk": 5,
-  "fields": {
-    "title": "Article 4",
-    "owner": 4,
-    "date": "2020-03-03T14:20:03Z",
-    "text": "This is Article 4. Article 4 is about Article 4",
+    "title": "Algorithms and Data Structures: Linear Search",
+    "owner": 5,
+    "date": "2019-11-22T10:09:33Z",
+    "text": "As the name says a linear search is a process that starts at the beginning of a list and goes through every element (one item at a time) until it finds the element which is looking for. To find the element which is searching for (for example we are searching for x), a linear search algorithm is comparing every element in the list with the value inside of x, until a match is found or the whole list has been searched. Performance for using linear search in large lists is bad because it makes at most n comparisons, where n is the length of the list. In practice, linear search algorithm is rarely being used because other search algorithms like the binary search algorithm allow significantly faster searching for all but shortlists.  Continue reading...",
     "categories": [
       1,
       2
@@ -54,14 +50,242 @@
 },
 {
   "model": "articles.article",
+  "pk": 5,
+  "fields": {
+    "title": "Why sharing is magical",
+    "owner": 6,
+    "date": "2020-01-13T09:00:00Z",
+    "text": "Sharing ideas, thoughts, information and knowledge is truly powerful. Here's a simple example to show what I mean by \"Sharing is magical\".  Simple tweet It started with Sacha Greif tweeting an article about Cross-cultural design written by Senengo Akpem.  Article The article is very interesting for designers and anyone curious how culture can affect our perception of things, even typography. Senengo mentions the typeface Neuland which is stereotyped to the African visualization, and deeply discusses the subject into details.",
+    "categories": [
+      3
+    ]
+  }
+},
+{
+  "model": "articles.article",
   "pk": 6,
   "fields": {
-    "title": "Article 5",
-    "owner": 8,
-    "date": "2020-03-03T14:20:29Z",
-    "text": "This is Article 5. Article 5 is about Article 5",
+    "title": "My Hacktoberfest 2019 Experience",
+    "owner": 7,
+    "date": "2020-03-04T10:12:19Z",
+    "text": "Let's discuss the experiences. I plan on wiring out the article more but I want to hear from other people's experiences and stories. Email me... jacob@mail",
     "categories": [
-      1
+      3
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 7,
+  "fields": {
+    "title": "What is ReactJS?",
+    "owner": 8,
+    "date": "2020-03-04T10:13:52Z",
+    "text": "What is React JS? ReactJS is a Javascript library for building frontend web application or UI. ReactJS allows us to create reusable UI components. It is developed by Facebook.  Features of React  Reusable Components Open Source Efficient and fast Work in Browser Large Community Basic part of React library a. Components b. Props.  Components Components are the building blocks of any React app. Basically any class or function in React is considered as component.  Props \u201cProps\u201d is a special keyword in React, which stands for properties and is being used for passing data from one component to another.",
+    "categories": [
+      4
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 8,
+  "fields": {
+    "title": "The Parallel Threads of Life and Programming",
+    "owner": 9,
+    "date": "2020-03-04T10:16:18Z",
+    "text": "I\u2019m convinced our deepest desire is, by paying the cost of time, to be shown a glimmer of some fundamental truth about the universe. To hear it whisper its lessons and point towards its purpose. And, if you look hard enough for these lessons, you will find them. Whether they are a manifestation of your mind or can be held in your hand, once you see them, they remain yours forever. Programming offers significant parallels to life. We are tasked with creating something\u2013something whose sum feels more significant than the parts. Like life, it is a test of bounded creativity. There are rules we must follow, some we should follow, and others we are free to ignore. Programming offers us a glimpse, however ephemeral it may be, into some fundamental truths about the world in which we reside. The Four Parallels Between Programming and Life Iteration is progress. Did you know, if you started the month with a single penny and it doubled every day, you would have $163 on the 15th of the month? Sure",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 9,
+  "fields": {
+    "title": "Command line tricks",
+    "owner": 10,
+    "date": "2020-03-04T10:18:11Z",
+    "text": "Effective collaboration, especially in open source software development, starts with effective organization. To make sure that nothing gets missed, the general rule, \u201cone issue, one pull request\u201d is a nice rule of thumb. Instead of opening an issue with a large scope like, \u201cFix all the broken links in the documentation,\u201d open source projects will have more luck attracting contributors with several smaller and more manageable issues. In the preceding example, you might scope broken links by section or by page. This allows more contributors to jump in and dedicate small windows of their time, rather than waiting for one person to take on a larger and more tedious contribution effort. Smaller scoped issues also help project maintainers see where work has been completed and where it hasn\u2019t. This reduces the chances that some part of the issue is missed, assumed to be completed, and later leads to bugs or security vulnerabilities. That\u2019s all well and good.",
+    "categories": [
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 10,
+  "fields": {
+    "title": "Kill software for great glory",
+    "owner": 11,
+    "date": "2020-02-26T18:00:00Z",
+    "text": "I've been a lover of FOSS ideals for years, dating back to when my brother first introduced me to Linux as a teenager, with Ubuntu. Ever since then I've believed that computing is for everyone, and I felt a loyalty to the Unix world as a Catholic does to their church community.  But part of me is starting to wonder if the Unix world is the the greatest waste of human effort I've ever seen. Not as opposed to Windows and Mac - I think the benefits of Unix-like operating systems over those are absolutely massive - but internally. When I look at the hundreds of Linux distributions and think of the maintainers, I wonder just how much of their time is spent solving problems that someone else already solved. And on a mostly-compatible operating system, too.  And how much time has been lost in support forums due to the community fragmentation? Most of them have their own forums, and each one usually has a forum, several mailing lists, and a bunch of other community areas.",
+    "categories": [
+      6
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 11,
+  "fields": {
+    "title": "7 Effective Steps to Cracking the Code Interview",
+    "owner": 12,
+    "date": "2020-03-04T10:22:52Z",
+    "text": "There is a reason programmers are prone to imposter syndrome. Failing a technical whiteboard coding interview can be one of the most sobering experiences alive.  Getting tested on data structures & algorithms, taught to you by a dull lecturer years ago, is the foundation of the test. Yet the test is absolutely brutal.  A failed test -- or several -- can cause you to question your self worth as a programmer. But don't.  I am here to tell you that a test is all the coding interview is, and to crack it, you need to study to pass the test.  This is our own version of the Bar exam for US lawyers or the Fundamentals of Engineering Exam (FE), only we get no credential and we are simply being measured against other candidates (which is a relief!). Engineers and lawyers who pass these exams study hard; they don't just rely on their experience. We should approach the coding interview the same way.",
+    "categories": [
+      2,
+      7
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 12,
+  "fields": {
+    "title": "Linked List Data Structure in Javascript",
+    "owner": 7,
+    "date": "2020-02-02T12:00:00Z",
+    "text": "A Linked List is a linear collection of data elements that are called nodes. So this is sort of like an array, but a little bit different. Each of these nodes has a value field(eg integer, character, etc) and another field called next which is a reference to the next node in the list. So conceptually, a linked list looks like this. In this case, the nodes contain integer numbers as their data. The first item in the list is used as a reference to traverse the list and is called the HEAD.The last item in the list has a field that points to null, which indicates that it is the end of the list. The diagram you saw above represents what's called a singly-linked list because each item only knows about its next neighbor. But there's no reason we couldn't have a doubly Linked List, which is shown below. In this case, each data item has a reference to both the previous and next items that are its neighbors.  Benefits of using a Linked List over arrays Linked Lists provide a benefit over regular",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 13,
+  "fields": {
+    "title": "Binary Search Tree: Insert, Find, and Validate",
+    "owner": 13,
+    "date": "2019-07-03T12:00:00Z",
+    "text": "Trees can have nodes that can have unlimited number of children of any value. Binary search tree is a tree data structure with more constraints.  Constraints Every node can have at most two children Node to left needs to have value less than parent Node to right needs to have value greater than parent Binary Tree Binary search tree is not the same as a Binary tree. Binary trees have nodes that can have at most two children, but there is no restriction on its left value being less than the parent or the right value being more than the parent.",
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 14,
+  "fields": {
+    "title": "150 Oracle DBA Interview Questions",
+    "owner": 14,
+    "date": "2020-03-04T10:27:21Z",
+    "text": "150 Oracle DBA Interview Questions I have listed 150 oracle dba interview questions. It also includes the Oracle Exadata, Linux, and AWS database Administration questions. It will be beneficial for Cloud DBAs. I know answers are missing but trust if I will give answers it will block your further reading. To get the answers at least you will read the oracle documentation and other information sources. It will help you develop concepts. If you not clear about any Question feel free to comment. I will reply as early as possible.  Describe Oracle database architecture?  What is SGA? What is the logical and physical structure of the database? What is pfile and spfile? Can we create pfile from spfile or vise versa when the database is down? What is the oracle background process? What is the difference between pmon and smon? What is instance recovery?",
+    "categories": [
+      5,
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 15,
+  "fields": {
+    "title": "Java Main Method: Why so Many Words?",
+    "owner": 15,
+    "date": "2020-03-04T10:28:50Z",
+    "text": "\"Seriously? I have to type this every time i write a program? That is a lot and I miss JavaScript! \ud83d\ude2d\" These were always my thoughts when I was in college just starting with Java after learning JavaScript for a bit.  What we see above is the main method in Java. Let's break it down and talk about each word in this line of code.  Public Public in Java is an access modifier. Access modifiers specify the accessibility or scope of a method, constructor, or a class. There are four access modifiers: Private: the access level of this modifier is only within the class and cannot be accessed from outside of the class. Public: the access level of this modifier is everywhere and can be accessed within the class, outside the class, within the package and outside the package. Protected: the access level of this modifier is within the package and outside the package through child classes, without which it cannot be accessed from outside. Default: the access level of this modifier is only within.",
+    "categories": [
+      7,
+      9
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 16,
+  "fields": {
+    "title": "12+ ways to Fibonacci",
+    "owner": 16,
+    "date": "2020-03-04T10:30:26Z",
+    "text": "This morning I came across a great little paper showing twelve algorithms to compute Fibonacci numbers in Python. I had to share!  Calculating fibonacci numbers recursively is used to benchmark computer languages and sometimes by interviewers trying to impress job seekers. More importantly, it inspired one of the greatest songs ever so it's worth remembering a few of these algorithms and spiral out :o)  Not to repeat the python examples from the paper, let's instead look at four ways to compute the fibonacci number of N in Javascript.",
+    "categories": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 17,
+  "fields": {
+    "title": "Machine Learning - Celsius V Fashion Mnist",
+    "owner": 17,
+    "date": "2020-03-04T10:31:44Z",
+    "text": "Our first neural network learned to convert Celsius degrees to Fahrenheit. So it returned a single number that could be a wide range of floating-point numbers On the other hand the neural network i mentioned using fashion mnist dataset produced 10 probability numbers On the probabilities indicate how confident our neural network is the given input image is of a particular class.  So we can see that neural networks can be used to solve different kinds of problems. The first problem where we predict a single number from an input is known as the regression problem.  Converting from Celsius to Fahrenheit is one example of a regression problem Determining the price of a house given its number of bedrooms square footage number of bathrooms etc is another example. On the other hand the problem we saw in this lesson of being able to classify images of clothing is known as a classification problem",
+    "categories": [
+      10
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 18,
+  "fields": {
+    "title": "4 examples in Python to understand algorithms",
+    "owner": 18,
+    "date": "2020-03-04T10:33:23Z",
+    "text": "Efficiency or Complexity An algorithm is, in plain English, just a series of steps for solving a problem.  Solving problems is about creativity, how to approach the problem with a proper solution.  Some solutions may be easy to come up with, but they are not efficient, that is, the complexity is higher than it needs to be.  When I say efficient, you can think about it in two dimensions: space and time.  The time dimension is about how long your solution takes to solve the problem  The space dimension is about how much storage your solution consumes to solve the problem.",
+    "categories": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 19,
+  "fields": {
+    "title": "Looking for remote work? Here\u2019s what\u2019s available",
+    "owner": 19,
+    "date": "2020-03-04T10:34:25Z",
+    "text": "This is a quick round-up of the Remote Friendly positions currently available in the jobs section:  Full Stack Developer @ Stackbit PHP, Node Developer @ bun.cx Sr. Developer Advocate @ Heroku Developer Advocate @ Containous Principal Engineer @ Philosophie Inc. Senior Software Engineer @ Philosophie Inc. Are you hiring? Consider posting a listing to reach the wonderful programmers here in the DEV Community.",
+    "categories": []
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 20,
+  "fields": {
+    "title": "Pusher is hiring a Visual Interactive Designer",
+    "owner": 20,
+    "date": "2020-03-02T18:00:00Z",
+    "text": "About Us Why Pusher? There are more than 20 million developers in the world with millions of soon-to-be developers currently in colleges, universities, coding bootcamps, or teaching themselves how to code via online courses and tutorials. This is your potential audience \ud83c\udf0d .  We believe that in the next ten years, every company will become a software company, and developers will need great tools to be productive and do their jobs. Pusher acts as a force multiplier to help people build more products and features with less code.",
+    "categories": [
+      5,
+      11
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 21,
+  "fields": {
+    "title": "Sticker Mule is hiring a Junior Frontend Developer",
+    "owner": 17,
+    "date": "2019-09-24T12:00:00Z",
+    "text": "Sticker Mule is the Internet's fastest growing printing company. We are privately-owned, profitable and powered by an outstanding remote team that supports the growth of our manufacturing operations. We aim to build one of the Internet\u2019s best technical teams. Currently, our development team operates in 8 countries and we\u2019re always looking for more exceptional developers to join us. This is a full-time, remote-friendly position.  Why we enjoy working here  We work flexible hours with an asynchronous culture. We work at a sustainable pace without unreasonable external deadlines. Varied, interesting technical challenges to work on. Opportunities to make a large impact as part of a small, highly motivated team. Job description Help our team implement new designs & features using CSS, HTML & JavaScript.  Responsibilities  Writes CSS, HTML, & JavaScript needed to implement new functionality. Optimizes code for performance, usability, accessibility and SEO. Collaborates with team to ensure we",
+    "categories": [
+      5
+    ]
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 22,
+  "fields": {
+    "title": "Theming with Styled Components",
+    "owner": 18,
+    "date": "2020-02-24T18:00:00Z",
+    "text": "A guide on theming your web applications with Styled Components.  Why should you theme? Themes help create an identity for your application. Themes can help abstract all usages of a particular color, length or shadow to a single place so that all use cases can follow it. It's easier to change. However solid your current app is, there is surely coming that dreaded moment when designer is going to swap those two colors around. If you have colors spread out all over your application, then you are going to have hell with it. If you think you can search and replace, do consider all ways in which colors can be represented in CSS. How to Theme? Styled Components comes in build in with a ThemeProvider to help you with this cause. Theme Provider is similar to a React Context Provider (in the sense that it is one). You have to wrap your content with a ThemeProvider and you can get started.",
+    "categories": [
+      4,
+      12
     ]
   }
 }
