@@ -48,7 +48,7 @@ class ArticleShow extends React.Component {
   render() {
     const { article } = this.state
     if (!article) return null
-    console.log(this.state.article.comments)
+    console.log(this.state.article)
     return(
       <div className="section">
       <div className="container">
