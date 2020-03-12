@@ -22,5 +22,5 @@ urlpatterns = [
     path('api/articles/', include('articles.urls')),
     path('api/categories/', include('categories.urls')),
     path('api/', include('jwt_auth.urls')),
-    # re_path(r'^.*$', index)
+    re_path(r'^.*$', index)
 ]
