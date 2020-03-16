@@ -77,7 +77,7 @@ class User(AbstractUser):
     return f'{self.username} - {self.id}'
 ```
 
-Our Category model only needed to have a name field because the name of the category would be attached to an article. This would be one of our **one-to-many** relationships.
+Our Category model only needed to have a name field because the name of the category would be attached to an article. This would be one of our **many-to-many** relationships as many articles can have many categories.
 ```py
 class Category(models.Model):
     category_name = models.CharField(max_length=50)
@@ -87,7 +87,7 @@ class Category(models.Model):
 ```
 
 Our most intricate model was our Article model. It had fields for the article's title, owner, date, text and categories.
-It also had other models that were nested within in such as the Comment and Like models.
+It also had other models that were nested within in such as the Comment and Like models. Likes were one of our **one-to-many** relationships as a user can apply one like to each article.
 ```py
 class Article(models.Model):
   title = models.CharField(max_length=50)
@@ -106,7 +106,7 @@ class Comment(models.Model):
   article = models.ForeignKey(Article, related_name="comments", null=True, on_delete=models.CASCADE)   
 
   def __str__(self):
-    return f'Comment by {self.owner} / {self.id} on {self.article}' # should either be article or title.
+    return f'Comment by {self.owner} / {self.id} on {self.article}'
     
 class Like(models.Model):
   like = models.IntegerField(default=0)
@@ -116,3 +116,28 @@ class Like(models.Model):
   def __str__(self):
     return f'Like by {self.owner} on {self.article}'
 ```
+
+**API End-points**
+
+#### 1. User
+
+
+|           | GET | PUT | POST | DELETE |
+|-----------|-----|-----|------|--------|
+| /register |     |     |   X  |        |
+| /login    |     |     |   X  |        |
+
++ Register - this uses a Post request to store the user's inputted information into the database.
++ Login - this uses a Post request however it check that the user's credentials match up to the stored data. If the match is made it will issue a token for the user to access the site.
+
+#### 2. Articles
+
+|                                              | GET | PUT | POST | DELETE |
+|----------------------------------------------|-----|-----|------|--------|
+| article/\<int:pk>                            |  X  |  X  |  X   |    X   |
+| article/\<int:pk>/comments                   |     |     |  X   |        |
+| article/\<int:pk>/comments/\<int:comment_pk> |     |     |  X   |        |
+| article/\<int:pk>/likes/                     |     |     |  X   |        |
+| article/\<int:pk>/likes/\<int:like_pk>       |     |     |  X   |        |
+
++ Articles - the articles use a Post request to be submitted by a user, they are then edited by using a Put request and they are read by using Get requests.
