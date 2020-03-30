@@ -62,7 +62,6 @@ A sketch how we wanted to lay out our articles
 A sketch of the layout for a user's profile
 ![Profile sketch](readmefiles/sketchprofile.jpg)
 
-# !!WIREFRAMES HERE!!
 
 ### Backend
 **Models**
