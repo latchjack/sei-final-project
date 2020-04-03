@@ -61,9 +61,7 @@ A sketch how we wanted to lay out our articles
 A sketch of the layout for a user's profile
 ![Profile sketch](readmefiles/sketchprofile.jpg)
 
-# !!WIREFRAMES HERE!!
-
-### Backend
+### Back-end Development
 **Models**
 Our backend was served by a PostgreSQL database. We used Table Plus to interact with data and check everything was being stored correctly. We created three tables, Articles, Categories and Users (JWT_Auth).
 
@@ -141,3 +139,72 @@ class Like(models.Model):
 | article/\<int:pk>/likes/\<int:like_pk>       |     |     |  X   |        |
 
 + Articles - the articles use a Post request to be submitted by a user, they are then edited by using a Put request and they are read by using Get requests.
+
+### Database
+
+Our database was first designed as an ERD diagram so we could plot out the relationships to each of the tables.
+
+![ERD diagram](readmefiles/relationships.png "Pensive's ERD diagram")
+
+The diagrams shows the one-to-many and the many-to-many relationships between each table and how they are related. For instance *many* Users can write *many* Articles and *many* comments, however an Article may be written by *one* User. 
+
+
+### Front-end Development
+
+The front-end was created with React.js and used Axios to send requests to our back-end and perform the CRUD tasks within our database. Using React was a really good decision as we were able to build reusable components that we could implement into the project.
+
+To initialise our front-end we used Facebook's Create-React-App to get it up and running.
+
+These are some features of the website that were designed using React.js. We decided to keep the aesthetic of the website clean and minimalist. 
+
+![Homepage](readmefiles/homepage.png "Pensive homepage")
+
+
+![FAQ Page](readmefiles/faq.png "Pensive FAQ page")
+
+
+![Registration](readmefiles/register.png "Pensive registration page")
+
+
+![Login](readmefiles/login.png "Pensive login page")
+
+
+![Article Index Page](readmefiles/articles.png "Pensive articles page")
+
+### Challenges
+The main challenges we faced when building this project were...
+
++ Designing a thorough plan for our Python model to stop ourselves from having to go back into the Back-End and modifying it when designing and implementing the Front-End. Early into the project we had some trouble with the article's categories and had to drop our database to go back and fix an issue we hadn't noticed.
++ Getting the comments to automatically populate the article once a user had added one to an article.
++ Upon deployment, our database did not get pushed through onto Heroku, meaning that our articles, comments and editing/deleting articles failed to work. (However, we found out that we could solve this by going through our users comments etc. and inputing them manually once deployed).
+
+
+### Improvements
+The improvements I would like to add to this project are the following...
++ Given more time, to create a user profile page, where it lists users own articles, profile picture and articles they have commented on.
++ Improve the styling of the page.
++ Add paragraphing into the back-end model so that the articles are formatted in a cleaner, more concise way.
++ User authetication for editing and deleting articles.
+
+## Wins and Key Learnings
+
+### Wins
++ The project works, a user can register, login and create an article.
++ Learning how to use Python, Django and PostgreSQL.
++ Deploying a Python project on Heroku.
++ Improved on my pair-programming skills.
+
+
+### Key Learnings
+The main things I learned building Pensive
++ Building the back-end with Python and Django. This was the first time I had built anything with both Python and Django and found it very different to using JavaScript and Node.js for the back-end.
++ What a Relational Database is and the relationships between the tables including one-to-many and many-to-many.
++ What an ERD diagram is and how to plan and design them.
++ How blogs are built and the structure of the website.
+
+___
+
+#### Author
+Latch Jack - You can contact me via [Twitter](https://twitter.com/LatchCodes "My twitter profile") or via [email](mailto:latch.jack@gmail.com "my email").
+
+Thank you for visiting my repository! :)
